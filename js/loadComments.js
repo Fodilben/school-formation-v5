@@ -20,16 +20,12 @@ function fetchComments() {
           // Loop through each comment and build the HTML
           feedback.forEach((item) => {
             htmlContent += `
-          <div class="comment">
-              <div class="comment-head">
-                <img src="./lib/profile-icon-comments.png" alt="" />
-                <h5>${item.email}</h5>
-              </div>
+            <div class="comment">
+              <h5>${item.email}</h5>
               <p>${item.COMMENT}</p>
             </div>`;
           });
 
-           
           // Set the built HTML to the comments container
           commentsContainer.innerHTML = htmlContent;
         } else {
